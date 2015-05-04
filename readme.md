@@ -194,12 +194,12 @@ or download directly.
 
 AssemblyLine depends on **[Underscore.js](http://underscorejs.org/)** and **[Moment.js](http://momentjs.com/)**, so don't forget to include them before.
 
-And then include the **assembly-line.js** file located at the *lib* directory (there's a minified version as well):
+And then include the **assembly-line.js** file located at the *dist* directory (there's a minified version as well):
 
 ```
 <script src="bower_components/underscore/underscore.js"></script>
 <script src="bower_components/moment/moment.js"></script>
-<script src="bower_components/assembly-line/lib/assembly-line.js"></script>
+<script src="bower_components/assembly-line/dist/assembly-line.js"></script>
 ```
 
 You can use it with Node or as a CommonJS module as well (such as RequireJS).
