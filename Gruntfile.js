@@ -45,46 +45,19 @@ module.exports = function (grunt) {
 			]
 		},
 
-		indent: {
-			scripts: {
-				src: [
-					'<%= files.srcDir %>/*.js'
-				],
-				dest: '<%= files.destDir %>/',
-				options: {
-					style: 'tab',
-					change: 1
-				}
-			}
-		},
-
-		umd: {
-			all: {
-				options: {
-					src: '<%= files.dest %>',
-					dest: '<%= files.dest %>', // optional, if missing the src will be used
-					objectToExport: 'AssemblyLine', // optional, internal object that will be exported
-					amdModuleId: 'assembly-line', // optional, if missing the AMD module will be anonymous
-					// globalAlias: 'Assembly', // optional, changes the name of the global variable
-					template: './build_extras/umd.hbs',
-					deps: { // optional, `default` is used as a fallback for rest!
-						args : ['_'],
-						separator: ', ',
-						'default': ['_', 'moment'],
-						amd: ['_', 'moment'],
-						cjs: ['_', 'moment'],
-						global: ['_', 'moment']
-					}
-				}
-			}
-		},
+		preprocess: {
+      umd: {
+        src: 'src/build/umd.js',
+        dest: '.tmp/<%= files.mainFileName %>.js'
+      },
+    },
 
 		concat: {
 			options: {
 				banner: '<%= meta.banner %>'
 			},
 			main: {
-				src: '<%= files.dest %>',
+				src: '<%= preprocess.umd.dest %>',
 				dest: '<%= files.dest %>'
 			}
 		},
@@ -95,7 +68,8 @@ module.exports = function (grunt) {
 				dest: '<%= files.destDir %>/<%= files.mainFileName %>.min.js',
 				options: {
 					banner: '<%= meta.banner %>',
-					sourceMap: '<%= files.destDir %>/<%= files.mainFileName %>.min.map'
+					sourceMap: '<%= files.destDir %>/<%= files.mainFileName %>.min.map',
+					sourceMappingURL: '<%= files.mainFileName %>.min.map'
 				}
 			}
 		},
@@ -161,8 +135,9 @@ module.exports = function (grunt) {
 
 		grunt.task.run([
 			'clean:all',
-			'indent:scripts',
-			'umd:all',
+			// 'indent:scripts',
+			// 'umd:all',
+			'preprocess:umd',
 			'concat',
 			'uglify',
 			'copy:build'
