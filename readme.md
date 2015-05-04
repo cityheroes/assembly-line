@@ -291,7 +291,6 @@ aggregations: [
 
 ### To Do:
 
-- Register bower
 - Register NPM
 - Complete documentation.
 - Create and setup unit tests.
