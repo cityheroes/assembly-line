@@ -6,7 +6,7 @@ Of course you could use *underscore* or any other library to code these transfor
 
 ### So, what does it do?
 
-You can checkout the [demo page](http://cityheroes.github.io/demo/) or read the explanation below.
+You can checkout the [demo page](http://cityheroes.github.io/assembly-demo/) or read the explanation below.
 
 Given the following collection:
 
