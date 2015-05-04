@@ -1,0 +1,55 @@
+<!doctype html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>AssemblyLine - Demo</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+		<link rel="stylesheet" href="bower_components/jquery-jsonview/dist/jquery.jsonview.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class="container-fluid" id="main_container">
+			<header class="header" id="header">
+				<div class="row">
+					<div class="col-md-4">
+						<h3>Assembly demo</h3>
+					</div>
+					<div class="col-md-8">
+						<section class="header__panel">
+							<button class="btn btn-primary" id="filter_button">Filter</button>
+							<button class="btn btn-primary" id="transform_button">Transform</button>
+							<button class="btn btn-primary" id="aggregate_button">Aggregate</button>
+						</section>
+					</div>
+				</div>
+			</header>
+
+			<section class="content" id="code_section">
+				<div class="row">
+					<div class="col-md-4">
+						<pre id="source_data"></pre>
+					</div>
+					<div class="col-md-3">
+						<pre id="steps_data"></pre>
+					</div>
+					<div class="col-md-5">
+						<pre id="results_data"></pre>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<script src="bower_components/jquery/dist/jquery.js"></script>
+		<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+		<script src="bower_components/jquery-jsonview/dist/jquery.jsonview.js"></script>
+
+		<script src="bower_components/underscore/underscore.js"></script>
+		<script src="bower_components/moment/moment.js"></script>
+		<script src="js/assembly-line.js"></script>
+		<script src="js/demo.js"></script>
+	</body>
+</html>

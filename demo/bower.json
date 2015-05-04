@@ -1,0 +1,14 @@
+{
+  "name": "Assembly Demo",
+  "private": true,
+  "dependencies": {
+    "underscore": "~1.8.3",
+    "moment": "~2.10.2"
+  },
+  "devDependencies": {
+    "bootstrap": "~3.3.4",
+    "jquery": "~2.1.4",
+    "modernizr": "~2.8.3",
+    "jquery-jsonview": "~1.2.2"
+  }
+}

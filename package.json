@@ -1,0 +1,40 @@
+{
+  "name": "assembly-line",
+  "version": "0.0.1",
+  "description": "Declarative JSON collections manipulation.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "process"
+  ],
+  "author": {
+    "name": "Mauro Trigo",
+    "email": "mauro.trigo@gmail.com",
+    "organization": "CityHeroes"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "grunt-contrib-connect": "^0.10.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "underscore": "~1.8.3"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-bump": "^0.3.1",
+    "grunt-cli": "0.1.13",
+    "grunt-contrib-clean": "0.5.0",
+    "grunt-contrib-concat": "0.1.2",
+    "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-jshint": "0.10.0",
+    "grunt-contrib-uglify": "0.2.0",
+    "grunt-env": "0.4.1",
+    "grunt-indent": "^0.1.4",
+    "grunt-mocha-test": "0.10.2",
+    "grunt-preprocess": "4.0.0",
+    "grunt-template": "0.2.3",
+    "load-grunt-tasks": "0.3.0",
+    "mocha": "1.19.0"
+  }
+}

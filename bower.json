@@ -1,0 +1,28 @@
+{
+  "name": "assembly-line",
+  "main": "assembly-line.js",
+  "version": "0.0.1",
+  "authors": [
+    "Mauro Trigo <mauro.trigo@gmail.com>"
+  ],
+  "description": "Declarative JSON collections manipulation.",
+  "moduleType": [
+    "amd",
+    "node"
+  ],
+  "keywords": [
+    "process"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "underscore": "~1.8.3",
+    "moment": "~2.10.2"
+  }
+}

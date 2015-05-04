@@ -1,0 +1,21 @@
+html, body {
+	height: 100%;
+}
+
+#main_container {
+	height: 100%;
+}
+
+.header {
+	padding-bottom: 16px;
+
+	/*border-bottom: 1px solid #F4F4F4;*/
+}
+
+.header__panel {
+	padding-top: 16px;
+}
+
+.content {
+	overflow: hidden;
+}

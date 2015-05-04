@@ -1,0 +1,1570 @@
+[
+   {
+    "metadata":  {
+      "iso_language_code": "en",
+      "result_type": "recent"
+    },
+    "created_at": "Sun May 03 20:40:53 +0000 2015",
+    "id": 594964869583102000,
+    "id_str": "594964869583101952",
+    "text": "RT @KathrynCBrown: ISOC Nepal needs our help #ReConnectNepal #ISOC https://t.co/JJpnoAiOmq",
+    "truncated": false,
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user":  {
+      "id": 17209202,
+      "id_str": "17209202",
+      "name": "Rudolf van der Berg",
+      "screen_name": "internetthought",
+      "location": "The Netherlands",
+      "description": "My personal tweets on Internet and telecom, not anybody elses. Links, favorites and retweets are not endorsements.",
+      "url": "http://t.co/2c4fuWmBsl",
+      "entities":  {
+        "url":  {
+          "urls":  [
+             {
+              "url": "http://t.co/2c4fuWmBsl",
+              "expanded_url": "http://nl.linkedin.com/in/rudolfvanderberg/",
+              "display_url": "nl.linkedin.com/in/rudolfvande…",
+              "indices":  [
+                0,
+                22
+              ]
+            }
+          ]
+        },
+        "description":  {
+          "urls":  []
+        }
+      },
+      "protected": false,
+      "followers_count": 1726,
+      "friends_count": 990,
+      "listed_count": 126,
+      "created_at": "Thu Nov 06 11:06:47 +0000 2008",
+      "favourites_count": 108,
+      "utc_offset": 7200,
+      "time_zone": "Amsterdam",
+      "geo_enabled": true,
+      "verified": false,
+      "statuses_count": 12240,
+      "lang": "en",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "is_translation_enabled": false,
+      "profile_background_color": "1A1B1F",
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_tile": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/501094149987532801/cZAxooIv_normal.jpeg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/501094149987532801/cZAxooIv_normal.jpeg",
+      "profile_banner_url": "https://pbs.twimg.com/profile_banners/17209202/1392290453",
+      "profile_link_color": "2FC2EF",
+      "profile_sidebar_border_color": "181A1E",
+      "profile_sidebar_fill_color": "252429",
+      "profile_text_color": "666666",
+      "profile_use_background_image": true,
+      "default_profile": false,
+      "default_profile_image": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweeted_status":  {
+      "metadata":  {
+        "iso_language_code": "en",
+        "result_type": "recent"
+      },
+      "created_at": "Sun May 03 11:22:07 +0000 2015",
+      "id": 594824250873217000,
+      "id_str": "594824250873217024",
+      "text": "ISOC Nepal needs our help #ReConnectNepal #ISOC https://t.co/JJpnoAiOmq",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "in_reply_to_screen_name": null,
+      "user":  {
+        "id": 2253614827,
+        "id_str": "2253614827",
+        "name": "Kathy Brown",
+        "screen_name": "KathrynCBrown",
+        "location": "",
+        "description": "President and CEO of @internetsociety. Believer in a connected, borderless, permission-less, limitless Internet that creates opportunity and progress for all.",
+        "url": "http://t.co/54IMqkkM2C",
+        "entities":  {
+          "url":  {
+            "urls":  [
+               {
+                "url": "http://t.co/54IMqkkM2C",
+                "expanded_url": "http://www.internetsociety.org",
+                "display_url": "internetsociety.org",
+                "indices":  [
+                  0,
+                  22
+                ]
+              }
+            ]
+          },
+          "description":  {
+            "urls":  []
+          }
+        },
+        "protected": false,
+        "followers_count": 530,
+        "friends_count": 211,
+        "listed_count": 31,
+        "created_at": "Thu Dec 19 14:32:17 +0000 2013",
+        "favourites_count": 19,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 71,
+        "lang": "en",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/441956768084537344/mL0HITyn_normal.jpeg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/441956768084537344/mL0HITyn_normal.jpeg",
+        "profile_link_color": "0084B4",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": true,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 5,
+      "favorite_count": 0,
+      "entities":  {
+        "hashtags":  [
+           {
+            "text": "ReConnectNepal",
+            "indices":  [
+              26,
+              41
+            ]
+          },
+           {
+            "text": "ISOC",
+            "indices":  [
+              42,
+              47
+            ]
+          }
+        ],
+        "symbols":  [],
+        "user_mentions":  [],
+        "urls":  [
+           {
+            "url": "https://t.co/JJpnoAiOmq",
+            "expanded_url": "https://www.internetsociety.org/form/donate-nepal",
+            "display_url": "internetsociety.org/form/donate-ne…",
+            "indices":  [
+              48,
+              71
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "possibly_sensitive": false,
+      "lang": "en"
+    },
+    "retweet_count": 5,
+    "favorite_count": 0,
+    "entities":  {
+      "hashtags":  [
+         {
+          "text": "ReConnectNepal",
+          "indices":  [
+            45,
+            60
+          ]
+        },
+         {
+          "text": "ISOC",
+          "indices":  [
+            61,
+            66
+          ]
+        }
+      ],
+      "symbols":  [],
+      "user_mentions":  [
+         {
+          "screen_name": "KathrynCBrown",
+          "name": "Kathy Brown",
+          "id": 2253614827,
+          "id_str": "2253614827",
+          "indices":  [
+            3,
+            17
+          ]
+        }
+      ],
+      "urls":  [
+         {
+          "url": "https://t.co/JJpnoAiOmq",
+          "expanded_url": "https://www.internetsociety.org/form/donate-nepal",
+          "display_url": "internetsociety.org/form/donate-ne…",
+          "indices":  [
+            67,
+            90
+          ]
+        }
+      ]
+    },
+    "favorited": false,
+    "retweeted": false,
+    "possibly_sensitive": false,
+    "lang": "en"
+  },
+   {
+    "metadata":  {
+      "iso_language_code": "en",
+      "result_type": "recent"
+    },
+    "created_at": "Sun May 03 20:40:53 +0000 2015",
+    "id": 594964869268394000,
+    "id_str": "594964869268393987",
+    "text": "RT @RushdieExplains: Superb analysis by Rupa Subramanya proves Nepal earthquake was liberal conspiracy to defame Narendra Modi",
+    "truncated": false,
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user":  {
+      "id": 3094367550,
+      "id_str": "3094367550",
+      "name": "RAJ KUMAR",
+      "screen_name": "rajkumartech111",
+      "location": "",
+      "description": "",
+      "url": null,
+      "entities":  {
+        "description":  {
+          "urls":  []
+        }
+      },
+      "protected": false,
+      "followers_count": 78,
+      "friends_count": 368,
+      "listed_count": 1,
+      "created_at": "Tue Mar 17 18:38:25 +0000 2015",
+      "favourites_count": 1,
+      "utc_offset": null,
+      "time_zone": null,
+      "geo_enabled": false,
+      "verified": false,
+      "statuses_count": 1213,
+      "lang": "en",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "is_translation_enabled": false,
+      "profile_background_color": "C0DEED",
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+      "profile_background_tile": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/577905627298574336/eILKXliY_normal.jpeg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/577905627298574336/eILKXliY_normal.jpeg",
+      "profile_link_color": "0084B4",
+      "profile_sidebar_border_color": "C0DEED",
+      "profile_sidebar_fill_color": "DDEEF6",
+      "profile_text_color": "333333",
+      "profile_use_background_image": true,
+      "default_profile": true,
+      "default_profile_image": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweeted_status":  {
+      "metadata":  {
+        "iso_language_code": "en",
+        "result_type": "recent"
+      },
+      "created_at": "Sun May 03 20:39:41 +0000 2015",
+      "id": 594964568620675100,
+      "id_str": "594964568620675073",
+      "text": "Superb analysis by Rupa Subramanya proves Nepal earthquake was liberal conspiracy to defame Narendra Modi",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "in_reply_to_screen_name": null,
+      "user":  {
+        "id": 2503480063,
+        "id_str": "2503480063",
+        "name": "RushdieExplainsIndia",
+        "screen_name": "RushdieExplains",
+        "location": "",
+        "description": "Parody account. Please note that this account has NOT been created and is NOT run by the real Salman Rushdie. Account run by Rohit Chopra @rchops",
+        "url": null,
+        "entities":  {
+          "description":  {
+            "urls":  []
+          }
+        },
+        "protected": false,
+        "followers_count": 25794,
+        "friends_count": 185,
+        "listed_count": 207,
+        "created_at": "Sun May 18 05:35:35 +0000 2014",
+        "favourites_count": 2,
+        "utc_offset": -25200,
+        "time_zone": "Pacific Time (US & Canada)",
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 2657,
+        "lang": "en",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": true,
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/469352315070054400/zhq6yGlh_normal.jpeg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/469352315070054400/zhq6yGlh_normal.jpeg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/2503480063/1400739412",
+        "profile_link_color": "0084B4",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": true,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 2,
+      "favorite_count": 2,
+      "entities":  {
+        "hashtags":  [],
+        "symbols":  [],
+        "user_mentions":  [],
+        "urls":  []
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "en"
+    },
+    "retweet_count": 2,
+    "favorite_count": 0,
+    "entities":  {
+      "hashtags":  [],
+      "symbols":  [],
+      "user_mentions":  [
+         {
+          "screen_name": "RushdieExplains",
+          "name": "RushdieExplainsIndia",
+          "id": 2503480063,
+          "id_str": "2503480063",
+          "indices":  [
+            3,
+            19
+          ]
+        }
+      ],
+      "urls":  []
+    },
+    "favorited": false,
+    "retweeted": false,
+    "lang": "en"
+  },
+   {
+    "metadata":  {
+      "iso_language_code": "en",
+      "result_type": "recent"
+    },
+    "created_at": "Sun May 03 20:40:53 +0000 2015",
+    "id": 594964867729248300,
+    "id_str": "594964867729248256",
+    "text": "RT @mirakamdar: Shameful! #Nepal government criticised for blocking earthquake aid to remote areas @Burke_Jason http://t.co/o5s0FdidYD",
+    "truncated": false,
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user":  {
+      "id": 20850940,
+      "id_str": "20850940",
+      "name": "Mirza Waheed",
+      "screen_name": "MirzaWaheed",
+      "location": "London",
+      "description": "Novelist. Journalist. Author of The Collaborator and The Book of Gold Leaves (Oct' 14).",
+      "url": null,
+      "entities":  {
+        "description":  {
+          "urls":  []
+        }
+      },
+      "protected": false,
+      "followers_count": 12289,
+      "friends_count": 789,
+      "listed_count": 240,
+      "created_at": "Sat Feb 14 14:59:56 +0000 2009",
+      "favourites_count": 7632,
+      "utc_offset": 3600,
+      "time_zone": "London",
+      "geo_enabled": false,
+      "verified": false,
+      "statuses_count": 20382,
+      "lang": "en",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "is_translation_enabled": false,
+      "profile_background_color": "352726",
+      "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/129148724/unknown_graves__Kharbagh__Kupwara.jpg",
+      "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/129148724/unknown_graves__Kharbagh__Kupwara.jpg",
+      "profile_background_tile": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/566723853632942081/jbj0mivM_normal.jpeg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/566723853632942081/jbj0mivM_normal.jpeg",
+      "profile_banner_url": "https://pbs.twimg.com/profile_banners/20850940/1419964850",
+      "profile_link_color": "D02B55",
+      "profile_sidebar_border_color": "829D5E",
+      "profile_sidebar_fill_color": "99CC33",
+      "profile_text_color": "3E4415",
+      "profile_use_background_image": true,
+      "default_profile": false,
+      "default_profile_image": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweeted_status":  {
+      "metadata":  {
+        "iso_language_code": "en",
+        "result_type": "recent"
+      },
+      "created_at": "Sun May 03 20:07:26 +0000 2015",
+      "id": 594956452617396200,
+      "id_str": "594956452617396224",
+      "text": "Shameful! #Nepal government criticised for blocking earthquake aid to remote areas @Burke_Jason http://t.co/o5s0FdidYD",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "in_reply_to_screen_name": null,
+      "user":  {
+        "id": 79569980,
+        "id_str": "79569980",
+        "name": "Mira Kamdar",
+        "screen_name": "mirakamdar",
+        "location": "Pantin",
+        "description": "Author, Editorial Writer International New York Times, Aspiring Jazz Violinist \n\n \nAuteure, Editorialiste, Violoniste Jazz / Swing",
+        "url": "http://t.co/o6NR39AOyB",
+        "entities":  {
+          "url":  {
+            "urls":  [
+               {
+                "url": "http://t.co/o6NR39AOyB",
+                "expanded_url": "http://www.mirakamdar.com",
+                "display_url": "mirakamdar.com",
+                "indices":  [
+                  0,
+                  22
+                ]
+              }
+            ]
+          },
+          "description":  {
+            "urls":  []
+          }
+        },
+        "protected": false,
+        "followers_count": 3730,
+        "friends_count": 377,
+        "listed_count": 137,
+        "created_at": "Sat Oct 03 21:30:55 +0000 2009",
+        "favourites_count": 4499,
+        "utc_offset": 7200,
+        "time_zone": "Paris",
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 11453,
+        "lang": "en",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "FF0D19",
+        "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/99337409/Planet_India_paperback_cover.jpg",
+        "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/99337409/Planet_India_paperback_cover.jpg",
+        "profile_background_tile": true,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/2100516003/Portrait_Twitter_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/2100516003/Portrait_Twitter_normal.jpg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/79569980/1398240950",
+        "profile_link_color": "009999",
+        "profile_sidebar_border_color": "EEEEEE",
+        "profile_sidebar_fill_color": "EFEFEF",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 2,
+      "favorite_count": 1,
+      "entities":  {
+        "hashtags":  [
+           {
+            "text": "Nepal",
+            "indices":  [
+              10,
+              16
+            ]
+          }
+        ],
+        "symbols":  [],
+        "user_mentions":  [
+           {
+            "screen_name": "burke_jason",
+            "name": "Jason Burke",
+            "id": 237742285,
+            "id_str": "237742285",
+            "indices":  [
+              83,
+              95
+            ]
+          }
+        ],
+        "urls":  [
+           {
+            "url": "http://t.co/o5s0FdidYD",
+            "expanded_url": "http://gu.com/p/484v7/stw",
+            "display_url": "gu.com/p/484v7/stw",
+            "indices":  [
+              96,
+              118
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "possibly_sensitive": false,
+      "lang": "en"
+    },
+    "retweet_count": 2,
+    "favorite_count": 0,
+    "entities":  {
+      "hashtags":  [
+         {
+          "text": "Nepal",
+          "indices":  [
+            26,
+            32
+          ]
+        }
+      ],
+      "symbols":  [],
+      "user_mentions":  [
+         {
+          "screen_name": "mirakamdar",
+          "name": "Mira Kamdar",
+          "id": 79569980,
+          "id_str": "79569980",
+          "indices":  [
+            3,
+            14
+          ]
+        },
+         {
+          "screen_name": "burke_jason",
+          "name": "Jason Burke",
+          "id": 237742285,
+          "id_str": "237742285",
+          "indices":  [
+            99,
+            111
+          ]
+        }
+      ],
+      "urls":  [
+         {
+          "url": "http://t.co/o5s0FdidYD",
+          "expanded_url": "http://gu.com/p/484v7/stw",
+          "display_url": "gu.com/p/484v7/stw",
+          "indices":  [
+            112,
+            134
+          ]
+        }
+      ]
+    },
+    "favorited": false,
+    "retweeted": false,
+    "possibly_sensitive": false,
+    "lang": "en"
+  },
+   {
+    "metadata":  {
+      "iso_language_code": "pt",
+      "result_type": "recent"
+    },
+    "created_at": "Sun May 03 20:40:52 +0000 2015",
+    "id": 594964863488806900,
+    "id_str": "594964863488806913",
+    "text": "RT @TerraNoticiasBR: Nepal: Unicef alerta sobre tráfico de crianças após tragédia\nhttp://t.co/4yC2J3AlGg http://t.co/9lJ2CcU10w",
+    "truncated": false,
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user":  {
+      "id": 3027297226,
+      "id_str": "3027297226",
+      "name": "cleidíssima",
+      "screen_name": "CleideWilliam",
+      "location": "sp-brasil",
+      "description": "Estamos, dia a dia, sendo submetidos aos caprichos de minorias organizadas que impõem suas vontades à maioria e chamam isso de democracia. (Percival Puggina)",
+      "url": null,
+      "entities":  {
+        "description":  {
+          "urls":  []
+        }
+      },
+      "protected": false,
+      "followers_count": 102,
+      "friends_count": 87,
+      "listed_count": 2,
+      "created_at": "Mon Feb 09 22:03:02 +0000 2015",
+      "favourites_count": 3489,
+      "utc_offset": -14400,
+      "time_zone": "Santiago",
+      "geo_enabled": true,
+      "verified": false,
+      "statuses_count": 5864,
+      "lang": "pt",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "is_translation_enabled": false,
+      "profile_background_color": "C0DEED",
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+      "profile_background_tile": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/564907976226373633/kwYoeTGJ_normal.jpeg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/564907976226373633/kwYoeTGJ_normal.jpeg",
+      "profile_link_color": "0084B4",
+      "profile_sidebar_border_color": "C0DEED",
+      "profile_sidebar_fill_color": "DDEEF6",
+      "profile_text_color": "333333",
+      "profile_use_background_image": true,
+      "default_profile": true,
+      "default_profile_image": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweeted_status":  {
+      "metadata":  {
+        "iso_language_code": "pt",
+        "result_type": "recent"
+      },
+      "created_at": "Sun May 03 19:15:57 +0000 2015",
+      "id": 594943493870592000,
+      "id_str": "594943493870592002",
+      "text": "Nepal: Unicef alerta sobre tráfico de crianças após tragédia\nhttp://t.co/4yC2J3AlGg http://t.co/9lJ2CcU10w",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "in_reply_to_screen_name": null,
+      "user":  {
+        "id": 80937256,
+        "id_str": "80937256",
+        "name": "Terra Notícias",
+        "screen_name": "TerraNoticiasBR",
+        "location": "Brasil",
+        "description": "As principais notícias sobre o que de principal acontece no Brasil e pelo mundo, em tempo real",
+        "url": "http://t.co/Ti1ZFbJRrA",
+        "entities":  {
+          "url":  {
+            "urls":  [
+               {
+                "url": "http://t.co/Ti1ZFbJRrA",
+                "expanded_url": "http://www.terra.com.br",
+                "display_url": "terra.com.br",
+                "indices":  [
+                  0,
+                  22
+                ]
+              }
+            ]
+          },
+          "description":  {
+            "urls":  []
+          }
+        },
+        "protected": false,
+        "followers_count": 1407628,
+        "friends_count": 532,
+        "listed_count": 3361,
+        "created_at": "Thu Oct 08 20:37:06 +0000 2009",
+        "favourites_count": 23,
+        "utc_offset": -10800,
+        "time_zone": "Brasilia",
+        "geo_enabled": false,
+        "verified": true,
+        "statuses_count": 123696,
+        "lang": "pt",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "7F7871",
+        "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/763758641/64832dda2b3d9f04f061c4412d4a92e2.jpeg",
+        "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/763758641/64832dda2b3d9f04f061c4412d4a92e2.jpeg",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/522023434771918850/S15m-TSr_normal.png",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/522023434771918850/S15m-TSr_normal.png",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/80937256/1403014975",
+        "profile_link_color": "FF9900",
+        "profile_sidebar_border_color": "FFFFFF",
+        "profile_sidebar_fill_color": "F5F4F3",
+        "profile_text_color": "47433A",
+        "profile_use_background_image": true,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 45,
+      "favorite_count": 44,
+      "entities":  {
+        "hashtags":  [],
+        "symbols":  [],
+        "user_mentions":  [],
+        "urls":  [
+           {
+            "url": "http://t.co/4yC2J3AlGg",
+            "expanded_url": "http://noticias.terra.com.br/mundo/asia/unicef-alerta-sobre-risco-de-trafico-de-criancas-apos-terremoto-no-nepal,1a9d95e50381d410VgnCLD200000b2bf46d0RCRD.html",
+            "display_url": "noticias.terra.com.br/mundo/asia/uni…",
+            "indices":  [
+              61,
+              83
+            ]
+          }
+        ],
+        "media":  [
+           {
+            "id": 594943487876837400,
+            "id_str": "594943487876837376",
+            "indices":  [
+              84,
+              106
+            ],
+            "media_url": "http://pbs.twimg.com/media/CEGp8zhUsAA7SRm.jpg",
+            "media_url_https": "https://pbs.twimg.com/media/CEGp8zhUsAA7SRm.jpg",
+            "url": "http://t.co/9lJ2CcU10w",
+            "display_url": "pic.twitter.com/9lJ2CcU10w",
+            "expanded_url": "http://twitter.com/TerraNoticiasBR/status/594943493870592002/photo/1",
+            "type": "photo",
+            "sizes":  {
+              "medium":  {
+                "w": 600,
+                "h": 399,
+                "resize": "fit"
+              },
+              "large":  {
+                "w": 940,
+                "h": 626,
+                "resize": "fit"
+              },
+              "small":  {
+                "w": 340,
+                "h": 226,
+                "resize": "fit"
+              },
+              "thumb":  {
+                "w": 150,
+                "h": 150,
+                "resize": "crop"
+              }
+            }
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "possibly_sensitive": false,
+      "lang": "pt"
+    },
+    "retweet_count": 45,
+    "favorite_count": 0,
+    "entities":  {
+      "hashtags":  [],
+      "symbols":  [],
+      "user_mentions":  [
+         {
+          "screen_name": "TerraNoticiasBR",
+          "name": "Terra Notícias",
+          "id": 80937256,
+          "id_str": "80937256",
+          "indices":  [
+            3,
+            19
+          ]
+        }
+      ],
+      "urls":  [
+         {
+          "url": "http://t.co/4yC2J3AlGg",
+          "expanded_url": "http://noticias.terra.com.br/mundo/asia/unicef-alerta-sobre-risco-de-trafico-de-criancas-apos-terremoto-no-nepal,1a9d95e50381d410VgnCLD200000b2bf46d0RCRD.html",
+          "display_url": "noticias.terra.com.br/mundo/asia/uni…",
+          "indices":  [
+            82,
+            104
+          ]
+        }
+      ],
+      "media":  [
+         {
+          "id": 594943487876837400,
+          "id_str": "594943487876837376",
+          "indices":  [
+            105,
+            127
+          ],
+          "media_url": "http://pbs.twimg.com/media/CEGp8zhUsAA7SRm.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/CEGp8zhUsAA7SRm.jpg",
+          "url": "http://t.co/9lJ2CcU10w",
+          "display_url": "pic.twitter.com/9lJ2CcU10w",
+          "expanded_url": "http://twitter.com/TerraNoticiasBR/status/594943493870592002/photo/1",
+          "type": "photo",
+          "sizes":  {
+            "medium":  {
+              "w": 600,
+              "h": 399,
+              "resize": "fit"
+            },
+            "large":  {
+              "w": 940,
+              "h": 626,
+              "resize": "fit"
+            },
+            "small":  {
+              "w": 340,
+              "h": 226,
+              "resize": "fit"
+            },
+            "thumb":  {
+              "w": 150,
+              "h": 150,
+              "resize": "crop"
+            }
+          },
+          "source_status_id": 594943493870592000,
+          "source_status_id_str": "594943493870592002",
+          "source_user_id": 80937256,
+          "source_user_id_str": "80937256"
+        }
+      ]
+    },
+    "favorited": false,
+    "retweeted": false,
+    "possibly_sensitive": false,
+    "lang": "pt"
+  },
+   {
+    "metadata":  {
+      "iso_language_code": "es",
+      "result_type": "recent"
+    },
+    "created_at": "Sun May 03 20:40:51 +0000 2015",
+    "id": 594964863358672900,
+    "id_str": "594964863358672896",
+    "text": "RT @losgrillosmx: .@ONU_es Pide que se acelere la entrega de ayuda a víctimas del sismo en #Nepal - http://t.co/VKoi1P13o8",
+    "truncated": false,
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user":  {
+      "id": 319818180,
+      "id_str": "319818180",
+      "name": "LuzdelCarmenRendónB",
+      "screen_name": "LuzRendonB",
+      "location": "Xalapa, Veracruz, México.",
+      "description": "Docente en Universidad \r\nVeracruzana. Finanzas e innovación educativa.",
+      "url": "http://t.co/C7sSWlmd7n",
+      "entities":  {
+        "url":  {
+          "urls":  [
+             {
+              "url": "http://t.co/C7sSWlmd7n",
+              "expanded_url": "http://mx.linkedin.com/pub/luz-del-carmen-rend%C3%B3n-bonilla/2a/574/7a6/",
+              "display_url": "mx.linkedin.com/pub/luz-del-ca…",
+              "indices":  [
+                0,
+                22
+              ]
+            }
+          ]
+        },
+        "description":  {
+          "urls":  []
+        }
+      },
+      "protected": false,
+      "followers_count": 1398,
+      "friends_count": 1990,
+      "listed_count": 168,
+      "created_at": "Sat Jun 18 20:04:58 +0000 2011",
+      "favourites_count": 5141,
+      "utc_offset": -18000,
+      "time_zone": "America/Mexico_City",
+      "geo_enabled": false,
+      "verified": false,
+      "statuses_count": 38957,
+      "lang": "es",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "is_translation_enabled": false,
+      "profile_background_color": "C0DEED",
+      "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/454319053037768704/kGE8ThqK.jpeg",
+      "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/454319053037768704/kGE8ThqK.jpeg",
+      "profile_background_tile": true,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/579655876211953664/Ed1fKy0s_normal.jpg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/579655876211953664/Ed1fKy0s_normal.jpg",
+      "profile_banner_url": "https://pbs.twimg.com/profile_banners/319818180/1427744172",
+      "profile_link_color": "0084B4",
+      "profile_sidebar_border_color": "000000",
+      "profile_sidebar_fill_color": "DDEEF6",
+      "profile_text_color": "333333",
+      "profile_use_background_image": true,
+      "default_profile": false,
+      "default_profile_image": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweeted_status":  {
+      "metadata":  {
+        "iso_language_code": "es",
+        "result_type": "recent"
+      },
+      "created_at": "Sun May 03 20:30:05 +0000 2015",
+      "id": 594962152542212100,
+      "id_str": "594962152542212096",
+      "text": ".@ONU_es Pide que se acelere la entrega de ayuda a víctimas del sismo en #Nepal - http://t.co/VKoi1P13o8",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "in_reply_to_screen_name": null,
+      "user":  {
+        "id": 234939086,
+        "id_str": "234939086",
+        "name": "losgrillos.com",
+        "screen_name": "losgrillosmx",
+        "location": "México",
+        "description": "Noticias Políticas de Veracruz y del País.",
+        "url": "http://t.co/oqI1b4ktUZ",
+        "entities":  {
+          "url":  {
+            "urls":  [
+               {
+                "url": "http://t.co/oqI1b4ktUZ",
+                "expanded_url": "http://www.losgrillos.com",
+                "display_url": "losgrillos.com",
+                "indices":  [
+                  0,
+                  22
+                ]
+              }
+            ]
+          },
+          "description":  {
+            "urls":  []
+          }
+        },
+        "protected": false,
+        "followers_count": 15795,
+        "friends_count": 12288,
+        "listed_count": 100,
+        "created_at": "Thu Jan 06 23:32:06 +0000 2011",
+        "favourites_count": 5,
+        "utc_offset": -14400,
+        "time_zone": "Eastern Time (US & Canada)",
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 58380,
+        "lang": "es",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "FFFFFF",
+        "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/378800000169521213/cIyaZDk8.jpeg",
+        "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/378800000169521213/cIyaZDk8.jpeg",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/423983569891897344/Qub5FeH9_normal.jpeg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/423983569891897344/Qub5FeH9_normal.jpeg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/234939086/1423270006",
+        "profile_link_color": "A1BC31",
+        "profile_sidebar_border_color": "FFFFFF",
+        "profile_sidebar_fill_color": "99CC33",
+        "profile_text_color": "3E4415",
+        "profile_use_background_image": true,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 1,
+      "favorite_count": 0,
+      "entities":  {
+        "hashtags":  [
+           {
+            "text": "Nepal",
+            "indices":  [
+              73,
+              79
+            ]
+          }
+        ],
+        "symbols":  [],
+        "user_mentions":  [
+           {
+            "screen_name": "ONU_es",
+            "name": "Naciones Unidas",
+            "id": 119844526,
+            "id_str": "119844526",
+            "indices":  [
+              1,
+              8
+            ]
+          }
+        ],
+        "urls":  [
+           {
+            "url": "http://t.co/VKoi1P13o8",
+            "expanded_url": "http://los-grillos.com/jzSJD",
+            "display_url": "los-grillos.com/jzSJD",
+            "indices":  [
+              82,
+              104
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "possibly_sensitive": false,
+      "lang": "es"
+    },
+    "retweet_count": 1,
+    "favorite_count": 0,
+    "entities":  {
+      "hashtags":  [
+         {
+          "text": "Nepal",
+          "indices":  [
+            91,
+            97
+          ]
+        }
+      ],
+      "symbols":  [],
+      "user_mentions":  [
+         {
+          "screen_name": "losgrillosmx",
+          "name": "losgrillos.com",
+          "id": 234939086,
+          "id_str": "234939086",
+          "indices":  [
+            3,
+            16
+          ]
+        },
+         {
+          "screen_name": "ONU_es",
+          "name": "Naciones Unidas",
+          "id": 119844526,
+          "id_str": "119844526",
+          "indices":  [
+            19,
+            26
+          ]
+        }
+      ],
+      "urls":  [
+         {
+          "url": "http://t.co/VKoi1P13o8",
+          "expanded_url": "http://los-grillos.com/jzSJD",
+          "display_url": "los-grillos.com/jzSJD",
+          "indices":  [
+            100,
+            122
+          ]
+        }
+      ]
+    },
+    "favorited": false,
+    "retweeted": false,
+    "possibly_sensitive": false,
+    "lang": "es"
+  },
+   {
+    "metadata":  {
+      "iso_language_code": "es",
+      "result_type": "recent"
+    },
+    "created_at": "Sun May 03 20:40:51 +0000 2015",
+    "id": 594964862826061800,
+    "id_str": "594964862826061824",
+    "text": "RT @el_pais: La Guardia Civil busca en una zona devastada a los siete montañeros sin localizar tras el terremoto de Nepal http://t.co/pyUOW…",
+    "truncated": false,
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user":  {
+      "id": 2389509801,
+      "id_str": "2389509801",
+      "name": "AlexAndrA R.B.",
+      "screen_name": "AlexAdela83",
+      "location": "Ecuador",
+      "description": "~La Religion Es Solo Una Manera De Sacarles El Diezmo A Los Ignorantes, Solo Existe Un Dios, Y Este No Se Enriquese Como Los Curas Charlatanes~",
+      "url": null,
+      "entities":  {
+        "description":  {
+          "urls":  []
+        }
+      },
+      "protected": false,
+      "followers_count": 537,
+      "friends_count": 1912,
+      "listed_count": 6,
+      "created_at": "Thu Mar 06 22:28:41 +0000 2014",
+      "favourites_count": 2300,
+      "utc_offset": null,
+      "time_zone": null,
+      "geo_enabled": true,
+      "verified": false,
+      "statuses_count": 6126,
+      "lang": "es",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "is_translation_enabled": false,
+      "profile_background_color": "C0DEED",
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+      "profile_background_tile": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/554150752781099008/3mSaonN4_normal.jpeg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/554150752781099008/3mSaonN4_normal.jpeg",
+      "profile_banner_url": "https://pbs.twimg.com/profile_banners/2389509801/1422675696",
+      "profile_link_color": "0084B4",
+      "profile_sidebar_border_color": "C0DEED",
+      "profile_sidebar_fill_color": "DDEEF6",
+      "profile_text_color": "333333",
+      "profile_use_background_image": true,
+      "default_profile": true,
+      "default_profile_image": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweeted_status":  {
+      "metadata":  {
+        "iso_language_code": "es",
+        "result_type": "recent"
+      },
+      "created_at": "Sun May 03 20:26:48 +0000 2015",
+      "id": 594961323957604400,
+      "id_str": "594961323957604352",
+      "text": "La Guardia Civil busca en una zona devastada a los siete montañeros sin localizar tras el terremoto de Nepal http://t.co/pyUOW4OJM1",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "in_reply_to_screen_name": null,
+      "user":  {
+        "id": 7996082,
+        "id_str": "7996082",
+        "name": "EL PAÍS",
+        "screen_name": "el_pais",
+        "location": "Madrid",
+        "description": "Las noticias globales más relevantes y la última hora en español, por los periodistas de EL PAÍS. Para informarse y conversar.",
+        "url": "http://t.co/YXsNUahxUX",
+        "entities":  {
+          "url":  {
+            "urls":  [
+               {
+                "url": "http://t.co/YXsNUahxUX",
+                "expanded_url": "http://www.elpais.com",
+                "display_url": "elpais.com",
+                "indices":  [
+                  0,
+                  22
+                ]
+              }
+            ]
+          },
+          "description":  {
+            "urls":  []
+          }
+        },
+        "protected": false,
+        "followers_count": 4179727,
+        "friends_count": 599,
+        "listed_count": 47015,
+        "created_at": "Mon Aug 06 16:20:09 +0000 2007",
+        "favourites_count": 0,
+        "utc_offset": 7200,
+        "time_zone": "Madrid",
+        "geo_enabled": true,
+        "verified": true,
+        "statuses_count": 158974,
+        "lang": "es",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": true,
+        "profile_background_color": "FFFFFF",
+        "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/506391816/f-elpais.png",
+        "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/506391816/f-elpais.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/517148424722866176/CB6c-k0__normal.jpeg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/517148424722866176/CB6c-k0__normal.jpeg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/7996082/1412132776",
+        "profile_link_color": "0084B4",
+        "profile_sidebar_border_color": "FFFFFF",
+        "profile_sidebar_fill_color": "F1F4F9",
+        "profile_text_color": "333333",
+        "profile_use_background_image": false,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 24,
+      "favorite_count": 15,
+      "entities":  {
+        "hashtags":  [],
+        "symbols":  [],
+        "user_mentions":  [],
+        "urls":  [
+           {
+            "url": "http://t.co/pyUOW4OJM1",
+            "expanded_url": "http://ow.ly/Msj62",
+            "display_url": "ow.ly/Msj62",
+            "indices":  [
+              109,
+              131
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "possibly_sensitive": false,
+      "lang": "es"
+    },
+    "retweet_count": 24,
+    "favorite_count": 0,
+    "entities":  {
+      "hashtags":  [],
+      "symbols":  [],
+      "user_mentions":  [
+         {
+          "screen_name": "el_pais",
+          "name": "EL PAÍS",
+          "id": 7996082,
+          "id_str": "7996082",
+          "indices":  [
+            3,
+            11
+          ]
+        }
+      ],
+      "urls":  [
+         {
+          "url": "http://t.co/pyUOW4OJM1",
+          "expanded_url": "http://ow.ly/Msj62",
+          "display_url": "ow.ly/Msj62",
+          "indices":  [
+            122,
+            140
+          ]
+        }
+      ]
+    },
+    "favorited": false,
+    "retweeted": false,
+    "possibly_sensitive": false,
+    "lang": "es"
+  },
+   {
+    "metadata":  {
+      "iso_language_code": "en",
+      "result_type": "recent"
+    },
+    "created_at": "Sun May 03 20:40:51 +0000 2015",
+    "id": 594964861605400600,
+    "id_str": "594964861605400576",
+    "text": "MIRACLE: Man, 101, pulled from Nepal quake rubble http://t.co/824EDo56ro",
+    "truncated": false,
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user":  {
+      "id": 2304954302,
+      "id_str": "2304954302",
+      "name": "105Africa",
+      "screen_name": "105Africa1",
+      "location": "Ghana,Nigeria,Uk",
+      "description": "Africa's no1 Entertainment Hub.reach105africa@gmail.com",
+      "url": "http://t.co/w1n0iO33AM",
+      "entities":  {
+        "url":  {
+          "urls":  [
+             {
+              "url": "http://t.co/w1n0iO33AM",
+              "expanded_url": "http://www.105africa.com",
+              "display_url": "105africa.com",
+              "indices":  [
+                0,
+                22
+              ]
+            }
+          ]
+        },
+        "description":  {
+          "urls":  []
+        }
+      },
+      "protected": false,
+      "followers_count": 180,
+      "friends_count": 39,
+      "listed_count": 3,
+      "created_at": "Wed Jan 22 14:39:44 +0000 2014",
+      "favourites_count": 1,
+      "utc_offset": 3600,
+      "time_zone": "Dublin",
+      "geo_enabled": false,
+      "verified": false,
+      "statuses_count": 2334,
+      "lang": "en",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "is_translation_enabled": false,
+      "profile_background_color": "C0DEED",
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+      "profile_background_tile": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/585038721545805824/dlVsnFdG_normal.jpg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/585038721545805824/dlVsnFdG_normal.jpg",
+      "profile_banner_url": "https://pbs.twimg.com/profile_banners/2304954302/1428319069",
+      "profile_link_color": "0084B4",
+      "profile_sidebar_border_color": "C0DEED",
+      "profile_sidebar_fill_color": "DDEEF6",
+      "profile_text_color": "333333",
+      "profile_use_background_image": true,
+      "default_profile": true,
+      "default_profile_image": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweet_count": 0,
+    "favorite_count": 0,
+    "entities":  {
+      "hashtags":  [],
+      "symbols":  [],
+      "user_mentions":  [],
+      "urls":  [
+         {
+          "url": "http://t.co/824EDo56ro",
+          "expanded_url": "http://wp.me/p5ExWA-1iN",
+          "display_url": "wp.me/p5ExWA-1iN",
+          "indices":  [
+            50,
+            72
+          ]
+        }
+      ]
+    },
+    "favorited": false,
+    "retweeted": false,
+    "possibly_sensitive": false,
+    "lang": "en"
+  },
+   {
+    "metadata":  {
+      "iso_language_code": "en",
+      "result_type": "recent"
+    },
+    "created_at": "Sun May 03 20:40:51 +0000 2015",
+    "id": 594964859902627800,
+    "id_str": "594964859902627843",
+    "text": "Need to do whatever we can to help out in Nepal #NepalEarthquake https://t.co/wVck7q6J82",
+    "truncated": false,
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user":  {
+      "id": 631618348,
+      "id_str": "631618348",
+      "name": "Rakesh Naidu",
+      "screen_name": "rakeshnaidu1212",
+      "location": "",
+      "description": "",
+      "url": null,
+      "entities":  {
+        "description":  {
+          "urls":  []
+        }
+      },
+      "protected": false,
+      "followers_count": 47,
+      "friends_count": 92,
+      "listed_count": 1,
+      "created_at": "Tue Jul 10 02:40:20 +0000 2012",
+      "favourites_count": 1,
+      "utc_offset": -36000,
+      "time_zone": "Hawaii",
+      "geo_enabled": false,
+      "verified": false,
+      "statuses_count": 92,
+      "lang": "en",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "is_translation_enabled": false,
+      "profile_background_color": "C0DEED",
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+      "profile_background_tile": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/568074603725991936/2RAVxe5L_normal.png",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/568074603725991936/2RAVxe5L_normal.png",
+      "profile_link_color": "0084B4",
+      "profile_sidebar_border_color": "C0DEED",
+      "profile_sidebar_fill_color": "DDEEF6",
+      "profile_text_color": "333333",
+      "profile_use_background_image": true,
+      "default_profile": true,
+      "default_profile_image": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweet_count": 0,
+    "favorite_count": 0,
+    "entities":  {
+      "hashtags":  [
+         {
+          "text": "NepalEarthquake",
+          "indices":  [
+            48,
+            64
+          ]
+        }
+      ],
+      "symbols":  [],
+      "user_mentions":  [],
+      "urls":  [
+         {
+          "url": "https://t.co/wVck7q6J82",
+          "expanded_url": "https://twitter.com/SriSri/status/593301612619108352",
+          "display_url": "twitter.com/SriSri/status/…",
+          "indices":  [
+            65,
+            88
+          ]
+        }
+      ]
+    },
+    "favorited": false,
+    "retweeted": false,
+    "possibly_sensitive": false,
+    "lang": "en"
+  }
+]
