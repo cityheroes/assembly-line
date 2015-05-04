@@ -1,6 +1,6 @@
 {
   "name": "assembly-line",
-  "main": "assembly-line.js",
+  "main": "dist/assembly-line.js",
   "version": "0.0.1",
   "authors": [
     "Mauro Trigo <mauro.trigo@gmail.com>"
@@ -19,7 +19,9 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "demo",
+    "build_extras"
   ],
   "dependencies": {
     "underscore": "~1.8.3",
