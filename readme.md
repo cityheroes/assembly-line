@@ -6,6 +6,8 @@ Of course you could use *underscore* or any other library to code these transfor
 
 ### So, what does it do?
 
+You can checkout the [demo page](http://cityheroes.github.io/demo/) or read the explanation below.
+
 Given the following collection:
 
 ```
@@ -48,7 +50,7 @@ var books = [
 ];
 ```
 
-Get all the books that belong to the 'Tolkien Society':
+Get all the books whose authors belong to the 'Tolkien Society':
 
 ```
 var assemblyLine = new AssemblyLine();
@@ -140,7 +142,7 @@ The result:
 ]
 ```
 
-Now let's get the count of these results:
+Now let's count these results:
 
 ```
 var summaryProcesses = {
@@ -179,8 +181,6 @@ The result:
 	2
 ]
 ```
-
-Checkout the [demo page](http://cityheroes.github.io/demo/) to learn more.
 
 ## Installation
 
