@@ -1,7 +1,7 @@
 {
   "name": "assembly-line",
   "main": "dist/assembly-line.js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "authors": [
     "Mauro Trigo <mauro.trigo@gmail.com>"
   ],
