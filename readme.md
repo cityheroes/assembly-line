@@ -180,6 +180,8 @@ The result:
 ]
 ```
 
+You can also cheout the [demo page](http://cityheroes.github.io/demo/) to learn more.
+
 ## Installation
 
 Install with **bower**:
