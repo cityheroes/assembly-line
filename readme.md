@@ -299,3 +299,4 @@ aggregations: [
 - Add aggregation options.
 - Add filter options.
 - Add recursive processing?
+- Modular operations

@@ -119,19 +119,33 @@
 	
 	AssemblyLine.prototype._applyTransformation = function(transformation, dataItem) {
 	
-		var result = getIt(dataItem, transformation.path) || this.settings.defaultValue;
+		var result =
+			typeof getIt(dataItem, transformation.path) !== 'undefined' ?
+				getIt(dataItem, transformation.path) :
+				this.settings.defaultValue
+		;
 	
 		if (!transformation.operation) {
 			return result;
 		}
 	
 		switch (transformation.operation) {
+	
+			// String operations
+	
 			case 'concat':
 				result = _.reduce(_.rest(transformation.params), function (memo, schemaName) {
 					return memo + ' ' + getIt(dataItem, schemaName);
 				}, getIt(dataItem, _.first(transformation.params)));
 				break;
+	
+			case 'truncate':
+				var length = transformation.params && transformation.params[0] ? transformation.params[0] : 100;
+				result = result.substring(0, length);
+				break;
+	
 			// Date and time cases, completely rely on moment.js
+	
 			case 'date':
 				if (result !== this.settings.defaultValue) {
 					result = moment(result, this.settings.inputDateFormat).format(this.settings.displayDateFormat);
