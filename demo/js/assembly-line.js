@@ -129,6 +129,8 @@
 			return result;
 		}
 	
+		var partialResult;
+	
 		switch (transformation.operation) {
 	
 			// String operations
@@ -151,24 +153,39 @@
 					result = moment(result, this.settings.inputDateFormat).format(this.settings.displayDateFormat);
 				}
 				break;
+	
 			case 'time':
 				if (result !== this.settings.defaultValue) {
-					result = moment(result, this.settings.inputDateFormat).format(this.settings.displayTimeFormat);
+					if (transformation.params && transformation.params[0]) {
+						partialResult = moment(result, this.settings.inputDateFormat).utc();
+					} else {
+						partialResult = moment(result, this.settings.inputDateFormat);
+					}
+					result = partialResult.format(this.settings.displayDatetimeFormat);
 				}
 				break;
+	
 			case 'datetime':
 				if (result !== this.settings.defaultValue) {
-					result = moment(result, this.settings.inputDateFormat).format(this.settings.displayDatetimeFormat);
+					if (transformation.params && transformation.params[0]) {
+						partialResult = moment(result, this.settings.inputDateFormat).utc();
+					} else {
+						partialResult = moment(result, this.settings.inputDateFormat);
+					}
+					result = partialResult.format(this.settings.displayDatetimeFormat);
 				}
 				break;
+	
 			case 'timey':
 				result = this.settings.timey ? result.substring(0, 13) + ':00:00' : result.substring(0, 10);
 				break;
+	
 			case 'pick':
 				result = _.map(transformation.params, function(property) {
 					return getIt(dataItem, property);
 				});
 				break;
+	
 			default:
 				return result;
 		}
