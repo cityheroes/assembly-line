@@ -1,6 +1,6 @@
 // assembly-line
 // ----------------------------------
-// v0.0.3
+// v0.0.4
 //
 // Copyright (c)2015 Mauro Trigo, CityHeroes.
 // Distributed under MIT license
