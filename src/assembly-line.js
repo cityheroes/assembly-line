@@ -7,9 +7,11 @@ var getIt = function(obj, property) {
 var assemblyLineDefaults = {
 	defaultValue: '', // Value to show when a path is not found.
 	timey: false, // Allow for minutes and seconds to be removed from datetime values.
+	inputDateFormat: 'YYYY-MM-DD HH:mm:ss',
 	displayDateFormat: 'DD/MM/YYYY', // Formats suited for moment.js: http://momentjs.com/docs/#/displaying/format/
 	displayTimeFormat: 'HH:mm:ss',
 	displayDatetimeFormat: 'DD/MM/YYYY HH:mm:ss',
+	outputLocalTime: true
 };
 
 var AssemblyLine = function(options) {
@@ -92,6 +94,14 @@ AssemblyLine.prototype._applyTransformations = function(transformations, dataCol
 // 	params: []
 // }
 
+AssemblyLine.prototype._parseDatetime = function(dateTime) {
+	var partial = moment.utc(dateTime, this.settings.inputDateFormat);
+	if (this.settings.outputLocalTime) {
+		partial.local();
+	}
+	return partial;
+};
+
 AssemblyLine.prototype._applyTransformation = function(transformation, dataItem) {
 
 	var result =
@@ -103,8 +113,6 @@ AssemblyLine.prototype._applyTransformation = function(transformation, dataItem)
 	if (!transformation.operation) {
 		return result;
 	}
-
-	var partialResult;
 
 	switch (transformation.operation) {
 
@@ -125,34 +133,25 @@ AssemblyLine.prototype._applyTransformation = function(transformation, dataItem)
 
 		case 'date':
 			if (result !== this.settings.defaultValue) {
-				result = moment(result, this.settings.inputDateFormat).format(this.settings.displayDateFormat);
+				result = this._parseDatetime(result).format(this.settings.displayDateFormat);
 			}
 			break;
 
 		case 'time':
 			if (result !== this.settings.defaultValue) {
-				if (transformation.params && transformation.params[0]) {
-					partialResult = moment(result, this.settings.inputDateFormat).utc();
-				} else {
-					partialResult = moment(result, this.settings.inputDateFormat);
-				}
-				result = partialResult.format(this.settings.displayDatetimeFormat);
+				result = this._parseDatetime(result).format(this.settings.displayTimeFormat);
 			}
 			break;
 
 		case 'datetime':
 			if (result !== this.settings.defaultValue) {
-				if (transformation.params && transformation.params[0]) {
-					partialResult = moment(result, this.settings.inputDateFormat).utc();
-				} else {
-					partialResult = moment(result, this.settings.inputDateFormat);
-				}
-				result = partialResult.format(this.settings.displayDatetimeFormat);
+				result = this._parseDatetime(result).format(this.settings.displayDatetimeFormat);
 			}
 			break;
 
 		case 'timey':
 			result = this.settings.timey ? result.substring(0, 13) + ':00:00' : result.substring(0, 10);
+			result = this._parseDatetime(result).format(this.settings.inputDateFormat);
 			break;
 
 		case 'pick':
