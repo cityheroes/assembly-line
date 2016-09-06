@@ -8,9 +8,9 @@ var assemblyLineDefaults = {
 	defaultValue: '', // Value to show when a path is not found.
 	timey: false, // Allow for minutes and seconds to be removed from datetime values.
 	inputDateFormat: 'YYYY-MM-DD HH:mm:ss',
-	displayDateFormat: 'DD/MM/YYYY', // Formats suited for moment.js: http://momentjs.com/docs/#/displaying/format/
+	displayDateFormat: 'L', // Formats suited for moment.js: http://momentjs.com/docs/#/displaying/format/
 	displayTimeFormat: 'HH:mm:ss',
-	displayDatetimeFormat: 'DD/MM/YYYY HH:mm:ss',
+	displayDatetimeFormat: 'L HH:mm:ss',
 	outputLocalTime: true
 };
 
@@ -158,6 +158,18 @@ AssemblyLine.prototype._applyTransformation = function(transformation, dataItem)
 			result = _.map(transformation.params, function(property) {
 				return getIt(dataItem, property);
 			});
+			break;
+
+		case 'lowercase':
+			if (result !== this.settings.defaultValue && typeof result === 'string') {
+				result = result.toLocaleLowerCase();
+			}
+			break;
+
+		case 'upercase':
+			if (result !== this.settings.defaultValue && typeof result === 'string') {
+				result = result.toLocaleUpperCase();
+			}
 			break;
 
 		default:
