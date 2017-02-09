@@ -44,6 +44,11 @@ AssemblyLine.prototype.process = function(dataCollection, processes) {
 		dataCollection = _.map(processes.aggregations, this._applyAggregation, { dataCollection: dataCollection });
 	}
 
+	// Apply transposition
+	if (processes.transposition && processes.transposition.pivot) {
+		dataCollection = this._applyTransposition(processes.transposition, dataCollection);
+	}
+
 	return dataCollection;
 };
 
@@ -211,4 +216,46 @@ AssemblyLine.prototype._applyAggregation = function(aggregation) {
 	}
 
 	return result;
+};
+
+AssemblyLine.prototype._applyTransposition = function(transposition, dataCollection) {
+	
+	var pivot = transposition.pivot;
+
+	var transformedCollection = _.map(dataCollection, function(dataItem) {
+		
+		var transformedItem = [
+			_.flatten(
+				_.pairs(
+					_.pick(dataItem, pivot)
+				)
+			),
+			_.pairs(
+				_.omit(dataItem, pivot)
+			)
+		];
+
+		return transformedItem;
+	});
+			
+	transformedCollection = _.zip.apply(this, transformedCollection);
+
+	// Normalization to avoid numeral keys is not possible at this point due to _.object behaviour
+	// Update pivot column title
+	var pivotCol = _.map(transformedCollection[0], function(dataItem) {
+		return [pivotName, dataItem[1]];
+	});
+
+	transformedCollection = _.map(transformedCollection, function(dataItem) {
+		
+		var transformedItem = _.zip(pivotCol, dataItem);
+		
+		transformedItem = _.map(transformedItem, function(partDataItem) {
+			return _.object(_.zip.apply(this, partDataItem));
+		});
+
+		return _.extend({}, transformedItem[0], transformedItem[1]);
+	});
+	
+	return transformedCollection;
 };
