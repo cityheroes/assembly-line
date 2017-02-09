@@ -19,6 +19,8 @@ var AssemblyLine = function(options) {
 	_.defaults(this.settings, assemblyLineDefaults);
 };
 
+AssemblyLine.getIt = getIt;
+
 AssemblyLine.prototype.process = function(dataCollection, processes) {
 
 	if (!_.isArray(dataCollection)) {
@@ -87,12 +89,6 @@ AssemblyLine.prototype._applyTransformations = function(transformations, dataCol
 
 	return transformedCollection;
 };
-
-// {
-// 	path: 'created',
-// 	transformation: 'time',
-// 	params: []
-// }
 
 AssemblyLine.prototype._parseDatetime = function(dateTime) {
 	var partial = moment.utc(dateTime, this.settings.inputDateFormat);
@@ -172,17 +168,19 @@ AssemblyLine.prototype._applyTransformation = function(transformation, dataItem)
 			}
 			break;
 
+		case 'decimal':
+			if (result !== this.settings.defaultValue) {
+				var decimalSteps = transformation.params && typeof transformation.params[0] !== 'undefined' ? parseInt(transformation.params[0]) : 2;
+				result = parseFloat(result).toFixed(decimalSteps);
+			}
+			break;
+
 		default:
 			return result;
 	}
 
 	return result;
 };
-
-// {
-// 	path: 'answer',
-// 	type: 'count',
-// }
 
 AssemblyLine.prototype._applyAggregation = function(aggregation) {
 
