@@ -254,7 +254,9 @@ AssemblyLine.prototype._applyTransposition = function(transposition, dataCollect
 			return _.object(_.zip.apply(this, partDataItem));
 		});
 
-		return _.extend({}, transformedItem[0], transformedItem[1]);
+		extendArgs = extendArgs.concat(transformedItem);
+
+		return _.extend.apply(this, extendArgs);
 	});
 	
 	return transformedCollection;
