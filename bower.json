@@ -1,9 +1,10 @@
 {
   "name": "assembly-line",
   "main": "dist/assembly-line.js",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "authors": [
-    "Mauro Trigo <mauro.trigo@gmail.com>"
+    "Mauro Trigo <mauro.trigo@gmail.com>",
+    "Jorge Arteaga <jl.arteaga.almaraz@gmail.com>"
   ],
   "description": "Declarative JSON collections manipulation.",
   "moduleType": [
