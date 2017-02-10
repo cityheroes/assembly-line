@@ -1,6 +1,6 @@
 // assembly-line
 // ----------------------------------
-// v0.0.7
+// v0.0.5
 //
 // Copyright (c)2017 Mauro Trigo, CityHeroes.
 // Distributed under MIT license
@@ -246,6 +246,7 @@
 	AssemblyLine.prototype._applyTransposition = function(transposition, dataCollection) {
 		
 		var pivot = transposition.pivot;
+		var pivotName = transposition.name;
 	
 		var transformedCollection = _.map(dataCollection, function(dataItem) {
 			
@@ -271,6 +272,10 @@
 			return [pivotName, dataItem[1]];
 		});
 	
+	
+	
+		transformedCollection = _.zip.apply(this, transformedCollection[1]);
+	
 		transformedCollection = _.map(transformedCollection, function(dataItem) {
 			
 			var transformedItem = _.zip(pivotCol, dataItem);
@@ -279,7 +284,11 @@
 				return _.object(_.zip.apply(this, partDataItem));
 			});
 	
-			return _.extend({}, transformedItem[0], transformedItem[1]);
+			var extendArgs = [{}];
+	
+			extendArgs = extendArgs.concat(transformedItem);
+	
+			return _.extend.apply(this, extendArgs);
 		});
 		
 		return transformedCollection;
