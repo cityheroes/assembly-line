@@ -221,6 +221,7 @@ AssemblyLine.prototype._applyAggregation = function(aggregation) {
 AssemblyLine.prototype._applyTransposition = function(transposition, dataCollection) {
 	
 	var pivot = transposition.pivot;
+	var pivotName = transposition.name;
 
 	var transformedCollection = _.map(dataCollection, function(dataItem) {
 		
@@ -246,6 +247,10 @@ AssemblyLine.prototype._applyTransposition = function(transposition, dataCollect
 		return [pivotName, dataItem[1]];
 	});
 
+
+
+	transformedCollection = _.zip.apply(this, transformedCollection[1]);
+
 	transformedCollection = _.map(transformedCollection, function(dataItem) {
 		
 		var transformedItem = _.zip(pivotCol, dataItem);
@@ -253,6 +258,8 @@ AssemblyLine.prototype._applyTransposition = function(transposition, dataCollect
 		transformedItem = _.map(transformedItem, function(partDataItem) {
 			return _.object(_.zip.apply(this, partDataItem));
 		});
+
+		var extendArgs = [{}];
 
 		extendArgs = extendArgs.concat(transformedItem);
 
