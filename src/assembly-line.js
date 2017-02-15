@@ -11,7 +11,8 @@ var assemblyLineDefaults = {
 	displayDateFormat: 'L', // Formats suited for moment.js: http://momentjs.com/docs/#/displaying/format/
 	displayTimeFormat: 'HH:mm:ss',
 	displayDatetimeFormat: 'L HH:mm:ss',
-	outputLocalTime: true
+	outputLocalTime: true,
+	overturnParentName: 'vlmParent'
 };
 
 var AssemblyLine = function(options) {
@@ -32,6 +33,15 @@ AssemblyLine.prototype.process = function(dataCollection, processes) {
 	// Apply filters
 	if (processes.filters && processes.filters.length > 0) {
 		dataCollection = this._applyFilters(processes.filters, dataCollection);
+	}
+
+	// Apply overturn
+	if (processes.overturn) {
+		if (!processes.overturn.attribute) {
+			console.error('An attribute must be specified in order to apply overturn operation');
+		} else {
+			dataCollection = this._applyOverturn(processes.overturn, dataCollection);
+		}
 	}
 
 	// Apply transformations
@@ -91,6 +101,43 @@ AssemblyLine.prototype._applyTransformations = function(transformations, dataCol
 
 		return transformedItem;
 	});
+
+	return transformedCollection;
+};
+
+/**
+ * Receives a collection of objects A containing
+ * an attribute X with an object or an array of objects B
+ * and returns a collection of objects B, each one of
+ * them containing a copy of the object A as an 'assemblylineParent' attribute.
+ * This attribute name can also be specified within the options.
+ */
+AssemblyLine.prototype._applyOverturn = function(overturn, dataCollection) {
+
+	var overturnAttribute = overturn.attribute;
+	var overturnParentName = overturn.overturnParentName || this.settings.overturnParentName;
+	
+	var transformedCollection = _.reduce(dataCollection, function(reducedItems, item) {
+
+		var overturnedParent = _.omit(item, overturnAttribute);
+
+		if (Array.isArray(item[overturnAttribute])) {	
+			var overturnedList = _.map(item[overturnAttribute], function(itemToOverturnize) {
+				itemToOverturnize[overturnParentName] = overturnedParent;
+				return itemToOverturnize;
+			});
+			
+			reducedItems = reducedItems.concat(overturnedList);
+		} else if (item[overturnAttribute]) {
+			var overturnedItem = item[overturnAttribute];
+			overturnedItem[overturnParentName] = overturnedParent;
+
+			reducedItems.push(overturnedItem);
+		}
+
+		return reducedItems;
+		
+	},[]);
 
 	return transformedCollection;
 };
