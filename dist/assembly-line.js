@@ -147,9 +147,9 @@
 			var overturnedParent = _.omit(item, overturnAttribute);
 	
 			if (Array.isArray(item[overturnAttribute])) {	
-				var overturnedList = _.map(item[overturnAttribute], function(itemToOverturnize) {
-					itemToOverturnize[overturnParentName] = overturnedParent;
-					return itemToOverturnize;
+				var overturnedList = _.map(item[overturnAttribute], function(itemToOverturn) {
+					itemToOverturn[overturnParentName] = overturnedParent;
+					return itemToOverturn;
 				});
 				
 				reducedItems = reducedItems.concat(overturnedList);
