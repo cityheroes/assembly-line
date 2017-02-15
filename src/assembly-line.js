@@ -109,7 +109,7 @@ AssemblyLine.prototype._applyTransformations = function(transformations, dataCol
  * Receives a collection of objects A containing
  * an attribute X with an object or an array of objects B
  * and returns a collection of objects B, each one of
- * them containing a copy of the object A as an 'assemblylineParent' attribute.
+ * them containing a copy of the object A as an 'vlmParent' attribute.
  * This attribute name can also be specified within the options.
  */
 AssemblyLine.prototype._applyOverturn = function(overturn, dataCollection) {
