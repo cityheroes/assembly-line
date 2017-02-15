@@ -1,6 +1,6 @@
 {
   "name": "assembly-line",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Declarative JSON collections manipulation.",
   "main": "index.js",
   "scripts": {
