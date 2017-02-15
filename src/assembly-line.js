@@ -37,8 +37,8 @@ AssemblyLine.prototype.process = function(dataCollection, processes) {
 
 	// Apply overturn
 	if (processes.overturn) {
-		if (!processes.overturn.attribute) {
-			console.error('An attribute must be specified in order to apply overturn operation');
+		if (!processes.overturn.pivot) {
+			console.error('An pivot must be specified in order to apply overturn operation');
 		} else {
 			dataCollection = this._applyOverturn(processes.overturn, dataCollection);
 		}
@@ -114,22 +114,22 @@ AssemblyLine.prototype._applyTransformations = function(transformations, dataCol
  */
 AssemblyLine.prototype._applyOverturn = function(overturn, dataCollection) {
 
-	var overturnAttribute = overturn.attribute;
+	var overturnPivotAttribute = overturn.pivot;
 	var parentAttributeName = overturn.parentAttributeName || this.settings.overturnParentAttributeName;
 	
 	var transformedCollection = _.reduce(dataCollection, function(reducedItems, item) {
 
-		var overturnedParent = _.omit(item, overturnAttribute);
+		var overturnedParent = _.omit(item, overturnPivotAttribute);
 
-		if (Array.isArray(item[overturnAttribute])) {	
-			var overturnedList = _.map(item[overturnAttribute], function(itemToOverturn) {
+		if (Array.isArray(item[overturnPivotAttribute])) {	
+			var overturnedList = _.map(item[overturnPivotAttribute], function(itemToOverturn) {
 				itemToOverturn[parentAttributeName] = overturnedParent;
 				return itemToOverturn;
 			});
 			
 			reducedItems = reducedItems.concat(overturnedList);
-		} else if (item[overturnAttribute]) {
-			var overturnedItem = item[overturnAttribute];
+		} else if (item[overturnPivotAttribute]) {
+			var overturnedItem = item[overturnPivotAttribute];
 			overturnedItem[parentAttributeName] = overturnedParent;
 
 			reducedItems.push(overturnedItem);
