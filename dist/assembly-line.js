@@ -1,6 +1,6 @@
 // assembly-line
 // ----------------------------------
-// v0.0.8
+// v0.0.7
 //
 // Copyright (c)2017 Mauro Trigo, CityHeroes.
 // Distributed under MIT license
@@ -37,7 +37,7 @@
 		displayTimeFormat: 'HH:mm:ss',
 		displayDatetimeFormat: 'L HH:mm:ss',
 		outputLocalTime: true,
-		overturnParentName: 'vlmParent'
+		overturnParentAttributeName: 'vlmParent'
 	};
 	
 	var AssemblyLine = function(options) {
@@ -140,7 +140,7 @@
 	AssemblyLine.prototype._applyOverturn = function(overturn, dataCollection) {
 	
 		var overturnAttribute = overturn.attribute;
-		var overturnParentName = overturn.overturnParentName || this.settings.overturnParentName;
+		var parentAttributeName = overturn.parentAttributeName || this.settings.overturnParentAttributeName;
 		
 		var transformedCollection = _.reduce(dataCollection, function(reducedItems, item) {
 	
@@ -148,20 +148,19 @@
 	
 			if (Array.isArray(item[overturnAttribute])) {	
 				var overturnedList = _.map(item[overturnAttribute], function(itemToOverturn) {
-					itemToOverturn[overturnParentName] = overturnedParent;
+					itemToOverturn[parentAttributeName] = overturnedParent;
 					return itemToOverturn;
 				});
 				
 				reducedItems = reducedItems.concat(overturnedList);
 			} else if (item[overturnAttribute]) {
 				var overturnedItem = item[overturnAttribute];
-				overturnedItem[overturnParentName] = overturnedParent;
+				overturnedItem[parentAttributeName] = overturnedParent;
 	
 				reducedItems.push(overturnedItem);
 			}
 	
 			return reducedItems;
-			
 		},[]);
 	
 		return transformedCollection;
