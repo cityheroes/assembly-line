@@ -1,6 +1,6 @@
 // assembly-line
 // ----------------------------------
-// v0.0.7
+// v0.0.8
 //
 // Copyright (c)2017 Mauro Trigo, CityHeroes.
 // Distributed under MIT license
@@ -62,8 +62,8 @@
 	
 		// Apply overturn
 		if (processes.overturn) {
-			if (!processes.overturn.attribute) {
-				console.error('An attribute must be specified in order to apply overturn operation');
+			if (!processes.overturn.pivot) {
+				console.error('An pivot must be specified in order to apply overturn operation');
 			} else {
 				dataCollection = this._applyOverturn(processes.overturn, dataCollection);
 			}
@@ -134,27 +134,27 @@
 	 * Receives a collection of objects A containing
 	 * an attribute X with an object or an array of objects B
 	 * and returns a collection of objects B, each one of
-	 * them containing a copy of the object A as an 'assemblylineParent' attribute.
+	 * them containing a copy of the object A as an 'vlmParent' attribute.
 	 * This attribute name can also be specified within the options.
 	 */
 	AssemblyLine.prototype._applyOverturn = function(overturn, dataCollection) {
 	
-		var overturnAttribute = overturn.attribute;
+		var overturnPivotAttribute = overturn.pivot;
 		var parentAttributeName = overturn.parentAttributeName || this.settings.overturnParentAttributeName;
 		
 		var transformedCollection = _.reduce(dataCollection, function(reducedItems, item) {
 	
-			var overturnedParent = _.omit(item, overturnAttribute);
+			var overturnedParent = _.omit(item, overturnPivotAttribute);
 	
-			if (Array.isArray(item[overturnAttribute])) {	
-				var overturnedList = _.map(item[overturnAttribute], function(itemToOverturn) {
+			if (Array.isArray(item[overturnPivotAttribute])) {	
+				var overturnedList = _.map(item[overturnPivotAttribute], function(itemToOverturn) {
 					itemToOverturn[parentAttributeName] = overturnedParent;
 					return itemToOverturn;
 				});
 				
 				reducedItems = reducedItems.concat(overturnedList);
-			} else if (item[overturnAttribute]) {
-				var overturnedItem = item[overturnAttribute];
+			} else if (item[overturnPivotAttribute]) {
+				var overturnedItem = item[overturnPivotAttribute];
 				overturnedItem[parentAttributeName] = overturnedParent;
 	
 				reducedItems.push(overturnedItem);
