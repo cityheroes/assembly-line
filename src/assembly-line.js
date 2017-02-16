@@ -20,20 +20,20 @@ var AssemblyLine = function(options) {
 	_.defaults(this.settings, assemblyLineDefaults);
 };
 
-// This defaults must *not* be configurable externally
-var overturnDefaults = {
-	append: function(itemToOverturn,overturnedParent, parentAttributeName) {
+// These methods must *not* be configurable externally
+var overturnMethods = {
+	append: function(itemToOverturn, overturnedParent, parentAttributeName) {
 		itemToOverturn[parentAttributeName] = overturnedParent;
 		return itemToOverturn;
 	},
-	merge: function(itemToOverturn,overturnedParent, parentAttributeName) {
+	merge: function(itemToOverturn, overturnedParent, parentAttributeName) {
 		var prefixedObject = _.chain(overturnedParent)
 			.keys()
 			.reduce(function(reducedObject, key) {
 				reducedObject[parentAttributeName+key] = overturnedParent[key];
 				return reducedObject;
 			}, {}).value();
-		return _.extend({},itemToOverturn, prefixedObject);
+		return _.extend({}, itemToOverturn, prefixedObject);
 	}
 }
 
@@ -133,36 +133,35 @@ AssemblyLine.prototype._applyOverturn = function(options, dataCollection) {
 
 	_.map(Array.isArray(options)? options: [options], function(optionItem) {
 
-		if (optionItem.pivot) {
-
-			var overturnPivotAttribute = optionItem.pivot;
-			var mode = optionItem.mode || that.settings.overturnMode;
-			var parentAttributeName = (mode =='merge' && optionItem.parentAttributeName=='')
-				? ''
-				:(optionItem.parentAttributeName || that.settings.overturnParentAttributeName);
-			var modeFunction = overturnDefaults[mode];
-
-			transformedCollection = _.reduce(transformedCollection, function(reducedItems, item) {
-		
-				var overturnedParent = _.omit(item, overturnPivotAttribute);
-		
-				if (Array.isArray(item[overturnPivotAttribute])) {	
-					var overturnedList = _.map(item[overturnPivotAttribute], function(itemToOverturn) {
-						return modeFunction(itemToOverturn, overturnedParent, parentAttributeName);
-					});
-					
-					reducedItems = reducedItems.concat(overturnedList);
-				} else if (item[overturnPivotAttribute]) {
-					var overturnedItem = item[overturnPivotAttribute];
-					reducedItems.push(modeFunction(overturnedItem, overturnedParent, parentAttributeName));
-				}
-		
-				return reducedItems;
-			},[]);
-
-		} else {
+		if (!optionItem.pivot) {
 			console.error('An pivot must be specified in order to apply overturn operation');
+			return;
 		}
+
+		var overturnPivotAttribute = optionItem.pivot;
+		var mode = optionItem.mode || that.settings.overturnMode;
+		var parentAttributeName = (mode == 'merge' && optionItem.parentAttributeName == '') ?
+			'' :
+			(optionItem.parentAttributeName || that.settings.overturnParentAttributeName);
+		var modeFunction = overturnMethods[mode];
+
+		transformedCollection = _.reduce(transformedCollection, function(reducedItems, item) {
+	
+			var overturnedParent = _.omit(item, overturnPivotAttribute);
+	
+			if (Array.isArray(item[overturnPivotAttribute])) {	
+				var overturnedList = _.map(item[overturnPivotAttribute], function(itemToOverturn) {
+					return modeFunction(itemToOverturn, overturnedParent, parentAttributeName);
+				});
+				
+				reducedItems = reducedItems.concat(overturnedList);
+			} else if (item[overturnPivotAttribute]) {
+				var overturnedItem = item[overturnPivotAttribute];
+				reducedItems.push(modeFunction(overturnedItem, overturnedParent, parentAttributeName));
+			}
+	
+			return reducedItems;
+		}, []);
 	});
 
 	return transformedCollection;
