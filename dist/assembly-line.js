@@ -45,6 +45,23 @@
 		_.defaults(this.settings, assemblyLineDefaults);
 	};
 	
+	// This defaults must *not* be configurable externally
+	var overturnDefaults = {
+		append: function(itemToOverturn,overturnedParent, parentAttributeName) {
+			itemToOverturn[parentAttributeName] = overturnedParent;
+			return itemToOverturn;
+		},
+		merge: function(itemToOverturn,overturnedParent, parentAttributeName) {
+			var prefixedObject = _.chain(overturnedParent)
+				.keys()
+				.reduce(function(reducedObject, key) {
+					reducedObject[parentAttributeName+key] = overturnedParent[key];
+					return reducedObject;
+				}, {}).value();
+			return _.extend({},itemToOverturn, prefixedObject);
+		}
+	}
+	
 	AssemblyLine.getIt = getIt;
 	
 	AssemblyLine.prototype.process = function(dataCollection, processes) {
@@ -62,11 +79,7 @@
 	
 		// Apply overturn
 		if (processes.overturn) {
-			if (!processes.overturn.pivot) {
-				console.error('An pivot must be specified in order to apply overturn operation');
-			} else {
-				dataCollection = this._applyOverturn(processes.overturn, dataCollection);
-			}
+			dataCollection = this._applyOverturn(processes.overturn, dataCollection);
 		}
 	
 		// Apply transformations
@@ -137,31 +150,45 @@
 	 * them containing a copy of the object A as an 'vlmParent' attribute.
 	 * This attribute name can also be specified within the options.
 	 */
-	AssemblyLine.prototype._applyOverturn = function(overturn, dataCollection) {
+	AssemblyLine.prototype._applyOverturn = function(options, dataCollection) {
 	
-		var overturnPivotAttribute = overturn.pivot;
-		var parentAttributeName = overturn.parentAttributeName || this.settings.overturnParentAttributeName;
-		
-		var transformedCollection = _.reduce(dataCollection, function(reducedItems, item) {
+		var transformedCollection = dataCollection;
 	
-			var overturnedParent = _.omit(item, overturnPivotAttribute);
+		var that = this;
 	
-			if (Array.isArray(item[overturnPivotAttribute])) {	
-				var overturnedList = _.map(item[overturnPivotAttribute], function(itemToOverturn) {
-					itemToOverturn[parentAttributeName] = overturnedParent;
-					return itemToOverturn;
-				});
-				
-				reducedItems = reducedItems.concat(overturnedList);
-			} else if (item[overturnPivotAttribute]) {
-				var overturnedItem = item[overturnPivotAttribute];
-				overturnedItem[parentAttributeName] = overturnedParent;
+		_.map(Array.isArray(options)? options: [options], function(optionItem) {
 	
-				reducedItems.push(overturnedItem);
+			if (optionItem.pivot) {
+	
+				var overturnPivotAttribute = optionItem.pivot;
+				var mode = optionItem.mode || that.settings.overturnMode;
+				var parentAttributeName = (mode =='merge' && optionItem.parentAttributeName=='')
+					? ''
+					:(optionItem.parentAttributeName || that.settings.overturnParentAttributeName);
+				var modeFunction = overturnDefaults[mode];
+	
+				transformedCollection = _.reduce(transformedCollection, function(reducedItems, item) {
+			
+					var overturnedParent = _.omit(item, overturnPivotAttribute);
+			
+					if (Array.isArray(item[overturnPivotAttribute])) {	
+						var overturnedList = _.map(item[overturnPivotAttribute], function(itemToOverturn) {
+							return modeFunction(itemToOverturn, overturnedParent, parentAttributeName);
+						});
+						
+						reducedItems = reducedItems.concat(overturnedList);
+					} else if (item[overturnPivotAttribute]) {
+						var overturnedItem = item[overturnPivotAttribute];
+						reducedItems.push(modeFunction(overturnedItem, overturnedParent, parentAttributeName));
+					}
+			
+					return reducedItems;
+				},[]);
+	
+			} else {
+				console.error('An pivot must be specified in order to apply overturn operation');
 			}
-	
-			return reducedItems;
-		},[]);
+		});
 	
 		return transformedCollection;
 	};
