@@ -1,6 +1,6 @@
 // assembly-line
 // ----------------------------------
-// v0.0.5
+// v0.0.8
 //
 // Copyright (c)2017 Mauro Trigo, CityHeroes.
 // Distributed under MIT license
@@ -36,7 +36,8 @@
 		displayDateFormat: 'L', // Formats suited for moment.js: http://momentjs.com/docs/#/displaying/format/
 		displayTimeFormat: 'HH:mm:ss',
 		displayDatetimeFormat: 'L HH:mm:ss',
-		outputLocalTime: true
+		outputLocalTime: true,
+		overturnParentAttributeName: 'vlmParent'
 	};
 	
 	var AssemblyLine = function(options) {
@@ -47,6 +48,25 @@
 	AssemblyLine.prototype.setOption = function(optionName, value) {
 		this.settings[optionName] = value;
 	};
+	
+	// These methods must *not* be configurable externally
+	var overturnMethods = {
+		append: function(itemToOverturn, overturnedParent, parentAttributeName) {
+			itemToOverturn[parentAttributeName] = overturnedParent;
+			return itemToOverturn;
+		},
+		merge: function(itemToOverturn, overturnedParent, parentAttributeName) {
+			var prefixedObject = _.chain(overturnedParent)
+				.keys()
+				.reduce(function(reducedObject, key) {
+					reducedObject[parentAttributeName+key] = overturnedParent[key];
+					return reducedObject;
+				}, {}).value();
+			return _.extend({}, itemToOverturn, prefixedObject);
+		}
+	};
+	
+	AssemblyLine.getIt = getIt;
 	
 	AssemblyLine.prototype.process = function(dataCollection, processes) {
 	
@@ -61,6 +81,11 @@
 			dataCollection = this._applyFilters(processes.filters, dataCollection);
 		}
 	
+		// Apply overturn
+		if (processes.overturn) {
+			dataCollection = this._applyOverturn(processes.overturn, dataCollection);
+		}
+	
 		// Apply transformations
 		if (processes.transformations && processes.transformations.length > 0) {
 			dataCollection = this._applyTransformations(processes.transformations, dataCollection);
@@ -69,6 +94,11 @@
 		// Apply aggregations
 		if (processes.aggregations && processes.aggregations.length > 0) {
 			dataCollection = _.map(processes.aggregations, this._applyAggregation, { dataCollection: dataCollection });
+		}
+	
+		// Apply transposition
+		if (processes.transposition && processes.transposition.pivot) {
+			dataCollection = this._applyTransposition(processes.transposition, dataCollection);
 		}
 	
 		return dataCollection;
@@ -117,11 +147,56 @@
 		return transformedCollection;
 	};
 	
-	// {
-	// 	path: 'created',
-	// 	transformation: 'time',
-	// 	params: []
-	// }
+	/**
+	 * Receives a collection of objects A containing
+	 * an attribute X with an object or an array of objects B
+	 * and returns a collection of objects B, each one of
+	 * them containing a copy of the object A as an 'vlmParent' attribute.
+	 * This attribute name can also be specified within the options.
+	 */
+	AssemblyLine.prototype._applyOverturn = function(options, dataCollection) {
+	
+		var transformedCollection = dataCollection;
+	
+		var that = this;
+	
+		_.map(Array.isArray(options)? options: [options], function(optionItem) {
+	
+			if (!optionItem.pivot) {
+				console.error('An pivot must be specified in order to apply overturn operation');
+				return;
+			}
+	
+			var overturnPivotAttribute = optionItem.pivot;
+			var mode = optionItem.mode || that.settings.overturnMode;
+			var parentAttributeName =
+				(mode == 'merge' && optionItem.parentAttributeName === '') ?
+					'' :
+					(optionItem.parentAttributeName || that.settings.overturnParentAttributeName)
+			;
+			var modeFunction = overturnMethods[mode];
+	
+			transformedCollection = _.reduce(transformedCollection, function(reducedItems, item) {
+	
+				var overturnedParent = _.omit(item, overturnPivotAttribute);
+	
+				if (Array.isArray(item[overturnPivotAttribute])) {
+					var overturnedList = _.map(item[overturnPivotAttribute], function(itemToOverturn) {
+						return modeFunction(itemToOverturn, overturnedParent, parentAttributeName);
+					});
+	
+					reducedItems = reducedItems.concat(overturnedList);
+				} else if (item[overturnPivotAttribute]) {
+					var overturnedItem = item[overturnPivotAttribute];
+					reducedItems.push(modeFunction(overturnedItem, overturnedParent, parentAttributeName));
+				}
+	
+				return reducedItems;
+			}, []);
+		});
+	
+		return transformedCollection;
+	};
 	
 	AssemblyLine.prototype._parseDatetime = function(dateTime) {
 		var partial = moment.utc(dateTime, this.settings.inputDateFormat);
@@ -203,9 +278,7 @@
 	
 			case 'decimal':
 				if (result !== this.settings.defaultValue) {
-	
 					var decimalSteps = transformation.params && typeof transformation.params[0] !== 'undefined' ? parseInt(transformation.params[0]) : 2;
-	
 					result = parseFloat(result).toFixed(decimalSteps);
 				}
 				break;
@@ -216,11 +289,6 @@
 	
 		return result;
 	};
-	
-	// {
-	// 	path: 'answer',
-	// 	type: 'count',
-	// }
 	
 	AssemblyLine.prototype._applyAggregation = function(aggregation) {
 	
@@ -251,6 +319,57 @@
 		}
 	
 		return result;
+	};
+	
+	AssemblyLine.prototype._applyTransposition = function(transposition, dataCollection) {
+	
+		var pivot = transposition.pivot;
+		var pivotName = transposition.name;
+	
+		var transformedCollection = _.map(dataCollection, function(dataItem) {
+	
+			var transformedItem = [
+				_.flatten(
+					_.pairs(
+						_.pick(dataItem, pivot)
+					)
+				),
+				_.pairs(
+					_.omit(dataItem, pivot)
+				)
+			];
+	
+			return transformedItem;
+		});
+	
+		transformedCollection = _.zip.apply(this, transformedCollection);
+	
+		// Normalization to avoid numeral keys is not possible at this point due to _.object behaviour
+		// Update pivot column title
+		var pivotCol = _.map(transformedCollection[0], function(dataItem) {
+			return [pivotName, dataItem[1]];
+		});
+	
+	
+	
+		transformedCollection = _.zip.apply(this, transformedCollection[1]);
+	
+		transformedCollection = _.map(transformedCollection, function(dataItem) {
+	
+			var transformedItem = _.zip(pivotCol, dataItem);
+	
+			transformedItem = _.map(transformedItem, function(partDataItem) {
+				return _.object(_.zip.apply(this, partDataItem));
+			});
+	
+			var extendArgs = [{}];
+	
+			extendArgs = extendArgs.concat(transformedItem);
+	
+			return _.extend.apply(this, extendArgs);
+		});
+	
+		return transformedCollection;
 	};
 
 	return AssemblyLine;
