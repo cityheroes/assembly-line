@@ -2,7 +2,7 @@
 // ----------------------------------
 // v0.0.5
 //
-// Copyright (c)2016 Mauro Trigo, CityHeroes.
+// Copyright (c)2017 Mauro Trigo, CityHeroes.
 // Distributed under MIT license
 
 (function(root, factory) {
@@ -42,6 +42,10 @@
 	var AssemblyLine = function(options) {
 		this.settings = options || {};
 		_.defaults(this.settings, assemblyLineDefaults);
+	};
+	
+	AssemblyLine.prototype.setOption = function(optionName, value) {
+		this.settings[optionName] = value;
 	};
 	
 	AssemblyLine.prototype.process = function(dataCollection, processes) {
@@ -194,6 +198,15 @@
 			case 'upercase':
 				if (result !== this.settings.defaultValue && typeof result === 'string') {
 					result = result.toLocaleUpperCase();
+				}
+				break;
+	
+			case 'decimal':
+				if (result !== this.settings.defaultValue) {
+	
+					var decimalSteps = transformation.params && typeof transformation.params[0] !== 'undefined' ? parseInt(transformation.params[0]) : 2;
+	
+					result = parseFloat(result).toFixed(decimalSteps);
 				}
 				break;
 	

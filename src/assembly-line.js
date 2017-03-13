@@ -19,6 +19,10 @@ var AssemblyLine = function(options) {
 	_.defaults(this.settings, assemblyLineDefaults);
 };
 
+AssemblyLine.prototype.setOption = function(optionName, value) {
+	this.settings[optionName] = value;
+};
+
 AssemblyLine.prototype.process = function(dataCollection, processes) {
 
 	if (!_.isArray(dataCollection)) {
@@ -169,6 +173,15 @@ AssemblyLine.prototype._applyTransformation = function(transformation, dataItem)
 		case 'upercase':
 			if (result !== this.settings.defaultValue && typeof result === 'string') {
 				result = result.toLocaleUpperCase();
+			}
+			break;
+
+		case 'decimal':
+			if (result !== this.settings.defaultValue) {
+
+				var decimalSteps = transformation.params && typeof transformation.params[0] !== 'undefined' ? parseInt(transformation.params[0]) : 2;
+
+				result = parseFloat(result).toFixed(decimalSteps);
 			}
 			break;
 
