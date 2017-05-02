@@ -43,14 +43,7 @@ var overturnMethods = {
 
 AssemblyLine.getIt = getIt;
 
-AssemblyLine.prototype.process = function(dataCollection, processes) {
-
-	if (!_.isArray(dataCollection)) {
-		dataCollection = [dataCollection];
-	}
-
-	processes = processes || {};
-
+AssemblyLine.prototype._process = function(dataCollection, processes){
 	// Apply filters
 	if (processes.filters && processes.filters.length > 0) {
 		dataCollection = this._applyFilters(processes.filters, dataCollection);
@@ -66,6 +59,11 @@ AssemblyLine.prototype.process = function(dataCollection, processes) {
 		dataCollection = this._applyTransformations(processes.transformations, dataCollection);
 	}
 
+	// Apply added transformations
+	if (processes.addedTransformations && processes.addedTransformations.length > 0) {
+		dataCollection = this._applyAddedTransformations(processes.addedTransformations, dataCollection);
+	}
+
 	// Apply aggregations
 	if (processes.aggregations && processes.aggregations.length > 0) {
 		dataCollection = _.map(processes.aggregations, this._applyAggregation, { dataCollection: dataCollection });
@@ -74,6 +72,26 @@ AssemblyLine.prototype.process = function(dataCollection, processes) {
 	// Apply transposition
 	if (processes.transposition && processes.transposition.pivot) {
 		dataCollection = this._applyTransposition(processes.transposition, dataCollection);
+	}
+
+	return dataCollection;
+};
+
+AssemblyLine.prototype.process = function(dataCollection, processes) {
+
+	if (!_.isArray(dataCollection)) {
+		dataCollection = [dataCollection];
+	}
+
+	processes = processes || {};
+
+	if (_.isArray(processes)) {
+		var that = this;
+		_.each(processes, function (procedures) {
+			dataCollection = that._process(dataCollection, procedures);
+		});
+	} else {
+		dataCollection = this._process(dataCollection, processes);
 	}
 
 	return dataCollection;
@@ -113,6 +131,23 @@ AssemblyLine.prototype._applyTransformations = function(transformations, dataCol
 		var transformedItem = {};
 
 		_.each(transformations, function(transformation) {
+			transformedItem[transformation.name] = that._applyTransformation(transformation, dataItem);
+		});
+
+		return transformedItem;
+	});
+
+	return transformedCollection;
+};
+
+AssemblyLine.prototype._applyAddedTransformations = function(addedTransformations, dataCollection) {
+
+	var that = this;
+
+	var transformedCollection = _.map(dataCollection, function(dataItem) {
+		var transformedItem = dataItem;
+
+		_.each(addedTransformations, function(transformation) {
 			transformedItem[transformation.name] = that._applyTransformation(transformation, dataItem);
 		});
 
@@ -237,6 +272,22 @@ AssemblyLine.prototype._applyTransformation = function(transformation, dataItem)
 			result = _.map(transformation.params, function(property) {
 				return getIt(dataItem, property);
 			});
+			break;
+
+		case 'sum':
+			// Select parameters
+			result = _.reduce(transformation.params, function (memo, param) {
+				var value = getIt(dataItem, param) || 0;
+				return memo + value;
+			}, 0);
+			break;
+
+		case 'exclussiveSum':
+
+			result = _.reduce(_.values(_.omit(dataItem, transformation.params)), function (memo, val) {
+				val = Number(val);
+				return memo + val;
+			}, 0);
 			break;
 
 		case 'lowercase':
