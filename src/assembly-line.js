@@ -282,7 +282,7 @@ AssemblyLine.prototype._applyTransformation = function(transformation, dataItem)
 			}, 0);
 			break;
 
-		case 'exclussiveSum':
+		case 'exclusiveSum':
 
 			result = _.reduce(_.values(_.omit(dataItem, transformation.params)), function (memo, val) {
 				val = Number(val);
